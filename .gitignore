@@ -1,0 +1,102 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+!.env.template
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+.venv/
+venv/
+env/
+ENV/
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Test, coverage, and quality tool caches
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+
+# Jupyter and notebooks runtime state
+.ipynb_checkpoints/
+
+# IDE and OS files
+.idea/
+.vscode/
+*.code-workspace
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Logs and process files
+*.log
+logs/
+*.pid
+*.seed
+
+# Docker and local compose overrides
+docker-compose.override.yml
+
+# Local databases and service state
+*.db
+*.sqlite
+*.sqlite3
+postgres_data/
+qdrant_storage/
+
+# MLflow local tracking outputs
+mlruns/
+mlartifacts/
+
+# Airflow local runtime outputs
+airflow.db
+airflow-webserver.pid
+airflow.cfg
+webserver_config.py
+
+# Disposable ML lab data and generated artifacts
+data/raw/
+data/interim/
+data/processed/
+data/features/
+data/predictions/
+data/reports/
+data/models/
+data/artifacts/
+data/checkpoints/
+data/runtime/
+data/tmp/
+data/temp/
+
+# Large local dataset and artifact formats
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.joblib
+*.onnx
+*.h5
+*.hdf5
+
+# Keep documentation and explicit sample contracts versionable.
+!data/.gitkeep
+!data/**/.gitkeep
+!data/sample/
+!data/samples/
+!data/README.md
+!docs/
+!schemas/
+!reports/
