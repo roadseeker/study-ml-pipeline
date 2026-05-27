@@ -88,6 +88,13 @@ Use this framing consistently in:
 - Preserve the Apache open-source and Python-first positioning. Do not casually replace the stack with commercial alternatives.
 - Do not assume MLflow, FastAPI, Qdrant, Airflow, or RAG assets are complete unless the repository state shows they have been implemented.
 
+## Company Knowledge and Memory Lookup
+
+- Use Neo4j `codex-memory` first when organization, role, policy, procedure, document-location, Git/DevOps, Slack/Confluence, or shared operating context is needed.
+- Use the smallest useful memory lookup first. Prefer exact anchor, role, policy, or document entity lookups when the entity name is known.
+- Avoid broad keyword searches or full graph reads at the initial lookup stage; expand to relations, source paths, Markdown, Confluence, or Qdrant only when the narrow result is insufficient or conflicting.
+- Summarize only the needed observations and source paths instead of carrying long raw memory output forward.
+
 ## Documentation Standards
 
 - Write documentation in a professional consulting style.
