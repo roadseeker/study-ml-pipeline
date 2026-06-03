@@ -90,7 +90,7 @@ Use this framing consistently in:
 
 ## Company Knowledge and Memory Lookup
 
-- Use Neo4j `codex-memory` first when organization, role, policy, procedure, document-location, Git/DevOps, Slack/Confluence, or shared operating context is needed.
+- Use `neo4j_memory` first when organization, role, policy, procedure, document-location, Git/DevOps, Slack/Confluence, or shared operating context is needed.
 - Current Codex MCP server names are `neo4j_memory` for Neo4j relationship/runtime memory lookup and `qdrant_knowledge` for Qdrant document chunk semantic search.
 - Use the smallest useful memory lookup first. Prefer exact anchor, role, policy, or document entity lookups when the entity name is known.
 - Avoid broad keyword searches or full graph reads at the initial lookup stage; expand to relations, source paths, Markdown, Confluence, or `qdrant_knowledge` only when the narrow result is insufficient or conflicting.
