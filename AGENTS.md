@@ -93,6 +93,7 @@ Use this framing consistently in:
 - Use `neo4j_memory` first when organization, role, policy, procedure, document-location, Git/DevOps, Slack/Confluence, or shared operating context is needed.
 - Current Codex MCP server names are `neo4j_memory` for Neo4j relationship/runtime memory lookup and `qdrant_knowledge` for Qdrant document chunk semantic search.
 - Use the smallest useful memory lookup first. Prefer exact anchor, role, policy, or document entity lookups when the entity name is known.
+- Role call names may differ from canonical memory entity names. For example, `송대리` resolves to `role:data-infrastructure-owner-song`. If the canonical anchor is unknown, search memory by the call name first, then use the resolved canonical entity name with `find_memories_by_name`.
 - Avoid broad keyword searches or full graph reads at the initial lookup stage; expand to relations, source paths, Markdown, Confluence, or `qdrant_knowledge` only when the narrow result is insufficient or conflicting.
 - Summarize only the needed observations and source paths instead of carrying long raw memory output forward.
 
